@@ -1,15 +1,8 @@
-# 🧪 App de Login com Python + Kivy
+ App de Login com Python + Kivy
 
 Este projeto é uma aplicação de login construída com **Python** e o framework **Kivy**, com suporte para múltiplas telas, validação de dados e persistência local de usuários.
 
-> 📱 O Kivy permite que você crie interfaces gráficas responsivas para **desktop** e **mobile (Android/iOS)** usando Python!
-
----
-
-## 📸 Demonstração
-
-
-## 🚀 Funcionalidades
+> O Kivy permite que você crie interfaces gráficas responsivas para **desktop** e **mobile (Android/iOS)** usando Python!
 
 - Tela de **login**
 - Tela de **criação de conta**
