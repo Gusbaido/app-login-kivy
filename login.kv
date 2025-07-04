@@ -1,0 +1,154 @@
+#:import rgba kivy.utils.get_color_from_hex
+
+WindowManager:
+    LoginWindow:
+    CreateAccountWindow:
+    MainWindow:
+
+<LoginWindow>:
+    name: "login"
+    email: email
+    password: password
+
+    canvas.before:
+        Color:
+            rgba: rgba("#2c3e50")
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    BoxLayout:
+        orientation: "vertical"
+        padding: 40
+        spacing: 20
+
+        Label:
+            text: "Bem-vindo!"
+            font_size: 32
+            color: 1, 1, 1, 1
+
+        TextInput:
+            id: email
+            hint_text: "Email"
+            multiline: False
+            background_color: 1, 1, 1, 0.1
+            foreground_color: 1, 1, 1, 1
+
+        TextInput:
+            id: password
+            hint_text: "Senha"
+            multiline: False
+            password: True
+            background_color: 1, 1, 1, 0.1
+            foreground_color: 1, 1, 1, 1
+
+        Button:
+            text: "Login"
+            background_color: rgba("#2980b9")
+            color: 1, 1, 1, 1
+            on_press: root.loginBtn()
+
+        Button:
+            text: "Criar Conta"
+            background_color: rgba("#16a085")
+            color: 1, 1, 1, 1
+            on_press: root.createBtn()
+
+<CreateAccountWindow>:
+    name: "create"
+    namee: namee
+    email: email
+    password: password
+
+    canvas.before:
+        Color:
+            rgba: rgba("#34495e")
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    BoxLayout:
+        orientation: "vertical"
+        padding: 40
+        spacing: 20
+
+        Label:
+            text: "Criar Nova Conta"
+            font_size: 32
+            color: 1, 1, 1, 1
+
+        TextInput:
+            id: namee
+            hint_text: "Nome completo"
+            multiline: False
+            background_color: 1, 1, 1, 0.1
+            foreground_color: 1, 1, 1, 1
+
+        TextInput:
+            id: email
+            hint_text: "Email"
+            multiline: False
+            background_color: 1, 1, 1, 0.1
+            foreground_color: 1, 1, 1, 1
+
+        TextInput:
+            id: password
+            hint_text: "Senha"
+            multiline: False
+            password: True
+            background_color: 1, 1, 1, 0.1
+            foreground_color: 1, 1, 1, 1
+
+        Button:
+            text: "Criar"
+            background_color: rgba("#27ae60")
+            color: 1, 1, 1, 1
+            on_press: root.submit()
+
+        Button:
+            text: "Voltar"
+            background_color: rgba("#c0392b")
+            color: 1, 1, 1, 1
+            on_press: root.login()
+
+<MainWindow>:
+    name: "main"
+    n: n
+    email: email
+    created: created
+
+    canvas.before:
+        Color:
+            rgba: rgba("#1abc9c")
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    BoxLayout:
+        orientation: "vertical"
+        padding: 40
+        spacing: 20
+
+        Label:
+            id: n
+            text: "Account Name:"
+            font_size: 24
+            color: 1, 1, 1, 1
+
+        Label:
+            id: email
+            text: "Email:"
+            font_size: 24
+            color: 1, 1, 1, 1
+
+        Label:
+            id: created
+            text: "Created On:"
+            font_size: 24
+            color: 1, 1, 1, 1
+
+        Button:
+            text: "Logout"
+            background_color: rgba("#e67e22")
+            color: 1, 1, 1, 1
+            on_press: root.logOut()
